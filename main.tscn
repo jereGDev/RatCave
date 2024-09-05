@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://do7rm7vpfoe0j"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_i03uu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1elrk"]
+font_size = 116
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i03uu")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 312.0
+offset_top = 179.0
+offset_right = 1001.0
+offset_bottom = 427.0
+text = "Hola mundo"
+label_settings = SubResource("LabelSettings_1elrk")

@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://bk20k20w58fcx"]
+
+[ext_resource type="PackedScene" uid="uid://ddf7k1a6v3i2a" path="res://Scenes/Player.tscn" id="1_tf7es"]
+[ext_resource type="PackedScene" uid="uid://beqxs5x8bqcr6" path="res://Scenes/spikes.tscn" id="2_d4qdf"]
+[ext_resource type="PackedScene" uid="uid://cqcj5qs1l076n" path="res://Scenes/EnemyTest.tscn" id="3_6kqwj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vw63g"]
+size = Vector2(1156.5, 96)
+
+[node name="platform" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(578.75, 598)
+shape = SubResource("RectangleShape2D_vw63g")
+
+[node name="Player" type="Node" parent="."]
+
+[node name="Player" parent="Player" instance=ExtResource("1_tf7es")]
+position = Vector2(171, 319)
+
+[node name="spikes" type="Node" parent="."]
+
+[node name="spike" parent="spikes" instance=ExtResource("2_d4qdf")]
+position = Vector2(1135, 530)
+
+[node name="spike2" parent="spikes" instance=ExtResource("2_d4qdf")]
+position = Vector2(41, 533)
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="EnemyTest" parent="Enemies" instance=ExtResource("3_6kqwj")]
+position = Vector2(980, 423)
