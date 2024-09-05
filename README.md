@@ -5,4 +5,4 @@
 Note
 You have to play from the platform scene for the game to work
 
-# Thank you for playing! :)
+#### Thank you for playing! :)
